@@ -1,0 +1,242 @@
+@import './reset.css';
+
+$primaryColor: #BE64FF;
+$secondaryColor: #EEEEEE;
+$shadowColor: #6F4F9F;
+
+:root {
+  font-family: "Arial Nova", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: $secondaryColor;
+}
+
+.largeTile {
+  scroll-snap-align: start;
+  display: block;
+  background-color: $primaryColor;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: $secondaryColor;
+  margin: 5px;
+  font-weight: 700;
+  font-size: 2rem;
+  max-height: 90vh;
+  overflow-y: scroll;
+  max-width: 400px;
+  min-width: 90vw;
+  box-shadow: 5px 5px 5px $shadowColor;
+  @media (min-width: 440px) {
+    min-width: 400px;
+  }
+}
+
+.smallTile {
+  background-color: $secondaryColor;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: $primaryColor;
+  margin: 5px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  overflow-y: hidden;
+}
+
+.btn {
+  max-width: 40vw;
+  min-width: 20px;
+  cursor: pointer;
+  overflow: visible;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+  }
+}
+
+.inactive {
+  height: 9vh;
+}
+//below beta styling code for darkening items when rating Print - RATE button toggle
+.shadowed {
+  outline: 1000px solid #000000b0;
+  z-index: 3
+}
+//end of beta code
+.Logo {
+  font-size: 1.5rem;
+  min-width: 20px;
+  max-width: 40vw;
+  overflow: visible;
+}
+
+.PageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem 0 0;
+  max-width: 100vw;
+  height: 10vh;
+}
+
+.Menu__button {
+  text-decoration: none;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    cursor: pointer;
+  }
+}
+
+.textField {
+  max-width: 90%;
+}
+
+.Menu-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  align-content: center;
+
+  &__link {
+    text-decoration: none;
+    font-size: 2rem;
+  }
+}
+
+.PrintArea {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory
+}
+
+.List {
+  width: 90vw;
+
+  &-header {
+    font-size: 2.5rem;
+    text-shadow: $shadowColor 3px 3px 3px;
+  }
+
+  &-items {
+    &-item {
+      background-position: initial;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 2rem;
+      padding: 0.5rem;
+
+      &-title {
+        display: flex;
+        justify-content: space-between;
+
+        &__header {
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+        }
+        &__rate {
+          font-size: 1rem;
+          text-decoration: none;
+          border: none;
+          border-radius: 10px;
+          height: 2rem;
+          color: $primaryColor;
+          font-weight: 700;
+        }
+      }
+
+      &__rating {
+        margin-bottom: 1rem;
+      }
+
+      &__author {
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+        overflow-wrap: break-word;
+        hyphens: manual;
+      }
+
+      &__webLink {
+        padding: 0 0.5rem;
+        text-decoration: none;
+        margin-bottom: 1rem;
+        color: $primaryColor;
+
+        &:hover {
+          background-color: $primaryColor;
+          color: $secondaryColor;
+          border-radius: 5px;
+        }
+      }
+
+      &__footer {
+        display: flex;
+        justify-content: space-between;
+
+        &__img {
+          margin-top: 1rem;
+          max-width: 30vw;
+          max-height: 30vh;
+        }
+      }
+
+    }
+  }
+}
+
+.deleteBtn {
+  background-color: $secondaryColor;
+  border-radius: 5px;
+  align-self: flex-end;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    border-radius: 5px;
+  }
+}
+
+.aboutUsText {
+  padding: 1rem;
+  max-width: 400px;
+  > p {
+    margin-bottom: 2rem;
+  }
+}
+
+
+.Auth{
+  margin-top: 20vh;
+  text-align: center;
+  display: flex;
+flex-direction: column;
+  align-items: center;
+  &-header {
+    padding: 1rem;
+  }
+  &-inputs{
+    &__input{
+      padding: 0.5rem;
+      margin: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  &-buttons {
+    &__button {
+      text-decoration: none;
+      cursor: pointer;
+      overflow: visible;
+    }
+  }
+}
+
+.signOutBtn {
+  width: 40vw;
+  margin-top: 5rem;
+  border: none;
+}
+
