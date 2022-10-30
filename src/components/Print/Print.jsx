@@ -17,7 +17,8 @@ export function Print() {
         listFromStorage[objIndex].rating = +e.target.value
         listFromStorage.sort((a, b) => (a.rating < b.rating) ? 1 : ((b.rating < a.rating) ? -1 : 0))
         localStorage.setItem('lists', JSON.stringify(dataFromStorage))
-        location.reload.href()
+        location.reload()
+
     }
 
     return (
