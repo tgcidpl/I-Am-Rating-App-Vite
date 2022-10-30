@@ -20,6 +20,8 @@ MUI
 Terminal:
 npm install -> npm run dev
 
+WebPage: https://i-m-rating-app.netlify.app
+
 Test account to try out:
 email: someone@email.com
 password: TWqhHORyyGiCbpOrahOF
