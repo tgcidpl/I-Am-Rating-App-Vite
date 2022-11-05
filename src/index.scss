@@ -10,16 +10,16 @@ $shadowColor: #6F4F9F;
 
 body {
   margin: 0 auto;
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
 }
 
 .largeTile {
   scroll-snap-align: start;
   display: block;
-  background-color: $primaryColor;
+  background-color: $secondaryColor;
   border-radius: 10px;
   padding: 0.5rem;
-  color: $secondaryColor;
+  color: $primaryColor;
   margin: 5px;
   font-weight: 700;
   font-size: 2rem;
@@ -28,20 +28,23 @@ body {
   max-width: 400px;
   min-width: 90vw;
   box-shadow: 5px 5px 5px $shadowColor;
+  border: 2px solid $primaryColor;
   @media (min-width: 440px) {
     min-width: 400px;
   }
 }
 
 .smallTile {
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
   border-radius: 10px;
   padding: 0.5rem;
-  color: $primaryColor;
+  color: $secondaryColor;
+  text-shadow: -2px -2px 0 $primaryColor, 2px -2px 0 $primaryColor, -2px 2px 0 $primaryColor, 2px 2px 0 $primaryColor;
   margin: 5px;
   font-weight: 400;
   font-size: 1.5rem;
   overflow-y: hidden;
+  border: 2px solid $primaryColor;
 }
 
 .btn {
@@ -51,8 +54,9 @@ body {
   overflow: visible;
 
   &:hover {
-    background-color: $primaryColor;
-    color: $secondaryColor;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    text-shadow: none;
   }
 }
 
@@ -84,16 +88,21 @@ body {
 .Menu__button {
   text-decoration: none;
   transition: all 0.5s;
-
+  border: 1px solid $secondaryColor;
   &:hover {
-    background-color: $primaryColor;
-    color: $secondaryColor;
+    background-color: $secondaryColor;
+    color: $primaryColor;
     cursor: pointer;
+    text-shadow: none;
   }
 }
 
 .textField {
   max-width: 90%;
+  color: $primaryColor;
+  background-color: $secondaryColor;
+  border: 2px solid $primaryColor;
+  text-shadow: none;
 }
 
 .Menu-list {
@@ -119,7 +128,7 @@ body {
 
   &-header {
     font-size: 2.5rem;
-    text-shadow: $shadowColor 3px 3px 3px;
+    text-shadow: $shadowColor 1px 1px 1px;
   }
 
   &-items {
@@ -146,6 +155,12 @@ body {
           height: 2rem;
           color: $primaryColor;
           font-weight: 700;
+          &:hover {
+            background-color: $primaryColor;
+            color: $secondaryColor;
+            cursor: pointer;
+            text-shadow: none;
+          }
         }
       }
 
@@ -164,12 +179,13 @@ body {
         padding: 0 0.5rem;
         text-decoration: none;
         margin-bottom: 1rem;
-        color: $primaryColor;
+        color: $secondaryColor;
 
         &:hover {
-          background-color: $primaryColor;
-          color: $secondaryColor;
+          background-color: $secondaryColor;
+          color: $primaryColor;
           border-radius: 5px;
+          text-shadow: none;
         }
       }
 
@@ -189,7 +205,7 @@ body {
 }
 
 .deleteBtn {
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
   border-radius: 5px;
   align-self: flex-end;
 
@@ -203,6 +219,7 @@ body {
 .aboutUsText {
   padding: 1rem;
   max-width: 400px;
+  margin-top: 2rem;
   > p {
     margin-bottom: 2rem;
   }
@@ -215,6 +232,8 @@ body {
   display: flex;
 flex-direction: column;
   align-items: center;
+  background-color: $primaryColor;
+  color: $secondaryColor;
   &-header {
     padding: 1rem;
   }
@@ -230,12 +249,20 @@ flex-direction: column;
       text-decoration: none;
       cursor: pointer;
       overflow: visible;
+      background-color: $secondaryColor;
+      color: $primaryColor;
+      text-shadow: none;
+      border: 1px solid $secondaryColor;
+      &:hover {
+        background-color: $primaryColor;
+        color: $secondaryColor;
+        border: 1px solid $secondaryColor;
+      }
     }
   }
 }
 
 .signOutBtn {
-  width: 40vw;
   margin-top: 5rem;
   border: none;
 }

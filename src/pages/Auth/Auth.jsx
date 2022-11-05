@@ -37,7 +37,7 @@ export function Auth() {
     }
 
     return (
-        <div className="largeTile Auth">
+        <div className="largeTile Auth shadowed">
             <h2 className="Auth-header">&#9733; I'm Rating &#9733;</h2>
             <h2 className="Auth-header">Welcome!</h2>
             <div className="Auth-inputs">

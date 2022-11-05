@@ -41,7 +41,7 @@ export function AddList() {
                 <div className="largeTile">
                     <label>List name: </label>
                     <input
-                        className="smallTile"
+                        className="smallTile textField"
                         type="text"
                         value={listName}
                         onChange={(e) => {
