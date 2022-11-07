@@ -20,6 +20,7 @@ body {
 
 .container {
   animation: fadeInOpacity 1s;
+  height: 90vh;
   ::-webkit-scrollbar {
     width: 0;
   }

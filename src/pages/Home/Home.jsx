@@ -5,25 +5,18 @@ import {PageHeader} from "../../components/PageHeader/index.jsx";
 
 export function Home() {
 
-    if (!localStorage.getItem("lists")) {
-        return (
-            <>
-                <PageHeader/>
-                <Link className="Menu-list__link largeTile fadeInOpacity" to="/create">Create your first list!</Link>
-            </>
-        )
-    }
-    const dataFromStorageToPrint = JSON.parse(localStorage.getItem("lists"))
-    if (Object.keys(dataFromStorageToPrint).length === 0) {
-        return (
-            <>
-                <PageHeader/>
-                <div className="container">
-                    <Link className="Menu-list__link largeTile fadeInOpacity" to="/create">Create your first
-                        list!</Link>
-                </div>
-            </>
-        )
+    if (!localStorage.getItem("lists") || Object.keys(JSON.parse(localStorage.getItem("lists"))).length === 0) {
+        {
+            return (
+                <>
+                    <PageHeader/>
+                    <div className="container">
+                        <Link className="Menu-list__link largeTile fadeInOpacity" to="/create">Create your first
+                            list!</Link>
+                    </div>
+                </>
+            )
+        }
     }
     return (
         <>
