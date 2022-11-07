@@ -13,10 +13,22 @@ export function Home() {
             </>
         )
     }
+    const dataFromStorageToPrint = JSON.parse(localStorage.getItem("lists"))
+    if (Object.keys(dataFromStorageToPrint).length === 0) {
+        return (
+            <>
+                <PageHeader/>
+                <div className="container">
+                    <Link className="Menu-list__link largeTile fadeInOpacity" to="/create">Create your first
+                        list!</Link>
+                </div>
+            </>
+        )
+    }
     return (
         <>
             <PageHeader/>
-            <Print />
+            <Print/>
         </>
     )
 }
