@@ -6,7 +6,7 @@ export function AboutUs() {
     return (
         <>
             <PageHeader/>
-            <div className="fadeInOpacity">
+            <div className="container">
                 <div className="largeTile">
                     About Us
                 </div>

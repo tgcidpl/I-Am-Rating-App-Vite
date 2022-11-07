@@ -18,9 +18,13 @@ body {
   background-color: $primaryColor;
 }
 
-.fadeInOpacity {
+.container {
   animation: fadeInOpacity 1s;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 }
+
 .largeTile {
   scroll-snap-align: start;
   display: block;
@@ -39,9 +43,6 @@ body {
   border: 2px solid $primaryColor;
   @media (min-width: 440px) {
     min-width: 400px;
-    }::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
   }
 }
 
@@ -59,7 +60,7 @@ body {
 }
 
 .btn {
-  max-width: 40vw;
+  max-width: 50%;
   min-width: 20px;
   cursor: pointer;
   overflow: visible;
@@ -72,7 +73,7 @@ body {
 }
 
 .inactive {
-  height: 9vh;
+  height: 4rem;
 }
 
 .shadowed {
@@ -132,14 +133,6 @@ body {
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  @media (min-width: 440px) {
-    overflow: scroll;
-    overflow-y: hidden;
-  }
-  ::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
-  }
 }
 
 .List {
@@ -164,7 +157,8 @@ body {
 
         &__header {
           margin-bottom: 0.5rem;
-          font-weight: 700;
+          font-weight: 500;
+          max-width: 80%;
         }
         &__rate {
           font-size: 1rem;
@@ -290,3 +284,7 @@ body {
   border: none;
 }
 
+.AddList{
+  display: flex;
+  flex-direction: column;
+}

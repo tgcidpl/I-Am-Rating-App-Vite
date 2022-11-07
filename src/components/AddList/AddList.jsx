@@ -35,7 +35,7 @@ export function AddList() {
     }
 
     return (
-        <div className="fadeInOpacity">
+        <div className="container">
             <h2 className="smallTile">Add your new list with its first entry!</h2>
             <form>
                 <div className="largeTile">
@@ -48,7 +48,7 @@ export function AddList() {
                             setListName(e.target.value);
                         }}/>
                     <ul>
-                        <li className="smallTile">
+                        <li className="smallTile AddList">
                             <label>Title</label>
                             <input
                                 className="smallTile textField"
