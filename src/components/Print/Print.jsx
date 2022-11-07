@@ -22,7 +22,7 @@ export function Print() {
     }
 
     return (
-            <div className="PrintArea">
+            <div className="PrintArea fadeInOpacity">
 
                 {Object.entries(dataFromStorageToPrint).map((list, idx) => {
                     return (

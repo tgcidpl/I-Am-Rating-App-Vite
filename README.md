@@ -4,9 +4,11 @@ I'm Rating! - Lightweight App for creating personal rating lists: books, films, 
 
 This App provides an easy way to create custom favourites lists with dynamic rating. 
 
-Data is currently being stored in Local Storage with future back-end communication in mind. 
+User creation and authorisation is handled via Supabase.
 
-UI is minimalistic and mobile-first. User creation and authorisation is handled via Supabase.
+Created lists are stored in Local Storage.
+
+UI is minimalistic and mobile-first.
 
 Technologies:
 REACT

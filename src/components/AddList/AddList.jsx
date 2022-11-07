@@ -35,7 +35,7 @@ export function AddList() {
     }
 
     return (
-        <div>
+        <div className="fadeInOpacity">
             <h2 className="smallTile">Add your new list with its first entry!</h2>
             <form>
                 <div className="largeTile">

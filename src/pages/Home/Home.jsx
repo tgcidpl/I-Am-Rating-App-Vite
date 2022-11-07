@@ -9,14 +9,14 @@ export function Home() {
         return (
             <>
                 <PageHeader/>
-                <Link className="Menu-list__link largeTile" to="/create">Create your first list!</Link>
+                <Link className="Menu-list__link largeTile fadeInOpacity" to="/create">Create your first list!</Link>
             </>
         )
     }
     return (
         <>
             <PageHeader/>
-            <Print/>
+            <Print />
         </>
     )
 }

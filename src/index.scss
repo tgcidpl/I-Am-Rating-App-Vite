@@ -4,6 +4,11 @@ $primaryColor: #BE64FF;
 $secondaryColor: #EEEEEE;
 $shadowColor: #6F4F9F;
 
+@keyframes fadeInOpacity {
+  0%    { opacity: 0; }
+  100%  { opacity: 1; }
+}
+
 :root {
   font-family: "Arial Nova", sans-serif;
 }
@@ -13,6 +18,9 @@ body {
   background-color: $primaryColor;
 }
 
+.fadeInOpacity {
+  animation: fadeInOpacity 1s;
+}
 .largeTile {
   scroll-snap-align: start;
   display: block;
@@ -31,6 +39,9 @@ body {
   border: 2px solid $primaryColor;
   @media (min-width: 440px) {
     min-width: 400px;
+    }::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
   }
 }
 
@@ -63,12 +74,12 @@ body {
 .inactive {
   height: 9vh;
 }
-//below beta styling code for darkening items when rating Print - RATE button toggle
+
 .shadowed {
   outline: 1000px solid #000000b0;
   z-index: 3
 }
-//end of beta code
+
 .Logo {
   font-size: 1.5rem;
   min-width: 20px;
@@ -120,7 +131,15 @@ body {
 .PrintArea {
   display: flex;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory
+  scroll-snap-type: x mandatory;
+  @media (min-width: 440px) {
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
 }
 
 .List {
@@ -230,10 +249,14 @@ body {
   margin-top: 20vh;
   text-align: center;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   align-items: center;
   background-color: $primaryColor;
   color: $secondaryColor;
+  @media (min-width: 440px) {
+    margin: 20vh auto;
+    overflow: hidden;
+  }
   &-header {
     padding: 1rem;
   }
