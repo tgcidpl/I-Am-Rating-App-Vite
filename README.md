@@ -19,8 +19,8 @@ Vite
 External libraries:
 MUI
 
-Terminal:
-npm install -> npm run dev
+Try dev build:
+npm run dev
 
 WebPage: https://i-m-rating-app.netlify.app
 
